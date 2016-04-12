@@ -119,7 +119,6 @@ VM *vm_load(FILE *f)
 			ip += I->opnd_sizes[1];
         }
     }
-    fclose(f);
     vm_init(vm, code, nbytes);
     return vm;
 }

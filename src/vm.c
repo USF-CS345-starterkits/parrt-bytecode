@@ -118,6 +118,7 @@ static void inline validate_stack(VM *vm, byte opcode, int sp) { }
 void vm_exec(VM *vm, bool trace_to_stderr) {
 	// TODO: fill in with your fetch-decode-execute functionality
 	// call vm_print_instr(vm, ip), vm_print_stack(vm) as necessary for tracing
+	printf("hi\n");
 }
 
 /* return a 32-bit integer at data[ip] */
