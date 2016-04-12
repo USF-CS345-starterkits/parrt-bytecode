@@ -86,13 +86,11 @@ static inline int16_t int16(const byte *data, addr32 ip);
 static void vm_trace_print_element(VM *vm, element el);
 
 VM *vm_alloc() {
-	VM *vm = calloc(1, sizeof(VM));
 	/* TODO:
 	calloc a VM
 	make space for the output and trace strings
 	return the vm
 	*/
-	return vm;
 }
 
 void vm_init(VM *vm, byte *code, int code_size)
