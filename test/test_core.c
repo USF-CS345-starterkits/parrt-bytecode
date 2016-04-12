@@ -1,7 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <stdbool.h>
-#include <vm.h>
 
 #include "vm.h"
 #include "c_unit.h"
