@@ -31,6 +31,7 @@ int main(int argc, char *argv[])
     if ( f!=NULL ) {
         VM *vm = vm_load(f);
         vm_exec(vm, false);
+        puts(vm->output);
     }
     return 0;
 }
