@@ -121,7 +121,6 @@ void vm_exec(VM *vm, bool trace_to_stderr)
 	// TODO: fill in with your fetch-decode-execute functionality
 	// call vm_print_instr(vm, ip), vm_print_stack(vm) as necessary for tracing
 	if (trace) {
-		WRITE_BACK_REGISTERS(vm);
 		vm_print_stack(vm);
 		if ( trace_to_stderr ) fprintf(stderr, "%s", cur_trace);
 	}
