@@ -115,10 +115,17 @@ void vm_free(VM *vm) {
 static void inline validate_stack_address(VM *vm, int a) { }
 static void inline validate_stack(VM *vm, byte opcode, int sp) { }
 
-void vm_exec(VM *vm, bool trace_to_stderr) {
+void vm_exec(VM *vm, bool trace_to_stderr)
+{
+	bool trace = true; // always store trace in vm->trace
 	// TODO: fill in with your fetch-decode-execute functionality
 	// call vm_print_instr(vm, ip), vm_print_stack(vm) as necessary for tracing
-	printf("hi\n");
+	if (trace) {
+		WRITE_BACK_REGISTERS(vm);
+		vm_print_stack(vm);
+		if ( trace_to_stderr ) fprintf(stderr, "%s", cur_trace);
+	}
+
 }
 
 /* return a 32-bit integer at data[ip] */
